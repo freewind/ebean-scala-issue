@@ -13,7 +13,7 @@ class BaseTest extends FlatSpec with ShouldMatchers with BeforeAndAfterEach {
 		val tran = Ebean.beginTransaction()
 		try {
 			val conn = tran.getConnection()
-			val sql = "truncate users, questions, articles cascade"
+			val sql = "truncate users, questions, articles, answers, comments, tags cascade"
 			conn.createStatement().executeUpdate(sql)
 			Ebean.commitTransaction()
 		} finally {
