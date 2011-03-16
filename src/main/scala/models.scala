@@ -23,3 +23,32 @@ class User {
 
 }
 
+@Entity
+@Table(name = "questions")
+class Question {
+
+	@Id
+	var id: Long = _
+
+	@Column
+	var content: String = _
+
+	@ManyToOne
+	var user: User = _
+
+}
+
+@Entity
+@Table(name = "articles")
+class Article {
+
+	@Id
+	var id: Long = _
+
+	@Column
+	var content: String = _
+
+	@ManyToOne
+	var user: User = _
+
+}
