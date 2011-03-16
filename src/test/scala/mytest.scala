@@ -66,7 +66,7 @@ class IssueTest extends FlatSpec with ShouldMatchers with BeforeAndAfterEach {
 		val found = Ebean.find(classOf[User], user.id)
 		val questions = found.questions
 		intercept[IndexOutOfBoundsException] {
-			questions.size should equal(2)
+			questions.size should equal(2) // FIXME
 		}
 	}
 }
