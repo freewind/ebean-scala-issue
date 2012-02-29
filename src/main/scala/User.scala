@@ -29,7 +29,7 @@ class User extends BaseEntity {
 	var questions: JList[Question] = _
 
 	@OneToMany
-	var articles: Buffer[Question] = _
+	var articles: Buffer[Article] = _
 
 	@OneToMany
 	var answers: JList[Answer] = _
